@@ -9,7 +9,7 @@ Q1: Car and Engine are related by (Composition). Engine is tied to Car.
 Q2: Color and Red are related by (Inheritance). Red is a type of Color.
 Q3: Shirt and Clothing are related by (Inheritance). Shirt is a type of Clothing.
 Q4: Furniture and Desk are related by which (Inheritance). Desk is a type of Furniture.
-Q5: CellPhone and Battery are related by (Composition). Battery is tied to Cellphone.
+Q5: CellPhone and Battery are related by (Composition). Battery is tied to CellPhone.
 */
 
 // import java.io.FileWriter; -- Not used for Part 1, outputs are on terminal
@@ -20,7 +20,8 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 
-		System.out.println();
+		System.out.println("Testing Part 1:");
+		System.out.println("");
 
 		// Ensure file is given in command-line
 		if (args.length != 1) {
@@ -29,7 +30,7 @@ public class Main {
 		}
 
 		// Instantiate a Person object
-		Person testPerson = new Person("Yoshi", 175.0, 50.0);
+		Person testPerson = new Person("Yoshi", 177.0, 80.0);
 		System.out.println("Test Person: " + testPerson);
 
 		// Instantiate a PersonSet object

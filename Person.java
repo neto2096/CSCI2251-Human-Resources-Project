@@ -1,3 +1,11 @@
+/*
+ * Person.java
+ * Name: Ernesto Morales Carrasco
+ * Email: emoralescarras@cnm.edu
+ * Assignment: Human Resources Part 1
+ * Purpose: Represents a person with name, height, and weight attributes.
+ */
+
 public class Person {
     private String name;
     private double height, weight;
@@ -8,43 +16,50 @@ public class Person {
         this.weight = weight;
     }
 
-    public String getName(){
+    // Getters
+    public String getName() {
         return name;
     }
 
-    public double getHeight(){
+    public double getHeight() {
         return height;
     }
 
-    public double getWeight(){
+    public double getWeight() {
         return weight;
     }
 
-    public void setName(String chosenName){
+    // Setters
+    public void setName(String chosenName) {
         name = chosenName;
     }
 
-    public void setHeight(double chosenHeight){
+    public void setHeight(double chosenHeight) {
         height = chosenHeight;
     }
 
-    public void setWeight(double chosenWeight){
+    public void setWeight(double chosenWeight) {
         weight = chosenWeight;
     }
 
+    // toString Method
     @Override
-    public String toString(){
+    public String toString() {
         return name + ": * Height: " + height + " * Weight: " + weight;
     }
 
+    // Compare two Person objects based on name, height, and weight
     @Override
     public boolean equals(Object o) {
-        if (o == null) return false;
-        if (o == this) return true;
-        if (!(o instanceof Person)) return false;
+        if (o == null)
+            return false;
+        if (o == this)
+            return true;
+        if (!(o instanceof Person))
+            return false;
         Person p = (Person) o;
         return this.name.equals(p.name) &&
-               Double.compare(this.height, p.height) == 0 &&
-               Double.compare(this.weight, p.weight) == 0;
+                Double.compare(this.height, p.height) == 0 &&
+                Double.compare(this.weight, p.weight) == 0;
     }
 }
