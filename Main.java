@@ -1,5 +1,5 @@
 /*
-This code is provided to give you a
+Second push This code is provided to give you a
 starting place. It should be modified.
 No further imports are needed.
 To earn full credit, you must also
@@ -28,8 +28,7 @@ public class Main
 		
 		System.out.println();
 		
-		/*
-		// Don't overcomplicate the data
+		/* Don't overcomplicate the data
 		// reading. After skipping the
 		// first row, you can use the 
 		// following to read a row of
