@@ -36,4 +36,15 @@ public class Person {
     public String toString(){
         return name + ": * Height: " + height + " * Weight: " + weight;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null) return false;
+        if (o == this) return true;
+        if (!(o instanceof Person)) return false;
+        Person p = (Person) o;
+        return this.name.equals(p.name) &&
+               Double.compare(this.height, p.height) == 0 &&
+               Double.compare(this.weight, p.weight) == 0;
+    }
 }
