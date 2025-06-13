@@ -45,7 +45,7 @@ public class Person {
     // toString Method
     @Override
     public String toString() {
-        return name + ": * Height: " + height + " * Weight: " + weight;
+        return name + "\t" + height + "\t\t" + weight;
     }
 
     // Compare two Person objects based on name, height, and weight

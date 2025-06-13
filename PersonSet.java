@@ -60,6 +60,7 @@ public class PersonSet implements PersonList {
         for (Person person : personList) {
             stringBuild.append(person.toString()).append("\n");
         }
-        return stringBuild.toString();
+        String header = "Name\tHeight (cm)\tWeight (kg)";
+        return header + "\n" + stringBuild.toString();
     }
 }
