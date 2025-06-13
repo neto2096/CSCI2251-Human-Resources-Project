@@ -1,8 +1,9 @@
 /*
 Name: Ernesto Morales Carrasco
 Email: emoralescarras@cnm.edu
-Assignment: Human Resources Part 1
-Purpose: Read HR data from hr.txt, store unique Person objects in a PersonSet, and display them, implementing inheritance.
+Assignment: Human Resources Part 2
+Purpose: Reads HR data from hr.txt, stores unique Person objects in PersonOrderedSet
+and PersonImperialSet, and outputs sorted and imperial-converted data to console and files
 
 Questions with answers:
 Q1: Car and Engine are related by (Composition). Engine is tied to Car.
@@ -22,18 +23,22 @@ public class Main {
 
 		System.out.println("Testing Part 2:");
 
+		// Check for correct command-line argument
 		if (args.length != 1) {
 			System.out.println("Usage: java Main <filename>");
 			return;
 		}
 
+		// Initialize sets for sorted and imperial data
 		PersonOrderedSet orderedSet = new PersonOrderedSet();
 		PersonImperialSet imperialSet = new PersonImperialSet();
 
+		// Add Yoshi to both sets
 		Person testPerson = new Person("Yoshi", 177.0, 80.0);
 		orderedSet.add(testPerson);
-		imperialSet.add(new Person("Yoshi", 177.0, 80.0)); // New instance to avoid reference issues
-
+		imperialSet.add(new Person("Yoshi", 177.0, 80.0));
+		
+		// Read data from input file
 		try (Scanner fileReader = new Scanner(new File(args[0]))) {
 			fileReader.nextLine(); // Skip header row
 			while (fileReader.hasNext()) {

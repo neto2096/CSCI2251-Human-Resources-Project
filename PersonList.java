@@ -2,8 +2,9 @@
  * PersonList.java
  * Name: Ernesto Morales Carrasco
  * Email: emoralescarras@cnm.edu
- * Assignment: Human Resources Part 1
- * Purpose: Interface for managing a list of Person objects.
+ * Assignment: Human Resources Part 2
+ * Purpose: Defines an interface for managing a list of Person objects, implemented by 
+ *          PersonSet, PersonOrderedSet, and PersonImperialSet.
  */
 
 public interface PersonList {

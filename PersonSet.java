@@ -3,8 +3,9 @@
  * PersonSet.java
  * Name: Ernesto Morales Carrasco
  * Email: emoralescarras@cnm.edu
- * Assignment: Human Resources Part 1
- * Purpose: Implements PersonList to store unique Person objects in an ArrayList.
+ * Assignment: Human Resources Part 2
+ * Purpose: Implements PersonList to store unique Person objects in an ArrayList, 
+ *          serving as a base class for PersonOrderedSet and PersonImperialSet.
  */
 import java.util.ArrayList;
 
@@ -52,7 +53,7 @@ public class PersonSet implements PersonList {
      * Returns a string representation of all Person objects in the set.
      * Each Person's toString output is appended with a newline.
      * 
-     * @return String representation of the set
+     * @return String representation of the set, including a header
      */
     @Override
     public String toString() {
