@@ -6,7 +6,7 @@
  * Purpose: Represents a person with name, height, and weight attributes.
  */
 
-public class Person {
+public class Person implements Comparable<Person>{
     private String name;
     private double height, weight;
 
@@ -61,5 +61,11 @@ public class Person {
         return this.name.equals(p.name) &&
                 Double.compare(this.height, p.height) == 0 &&
                 Double.compare(this.weight, p.weight) == 0;
+    }
+
+
+    @Override
+    public int compareTo(Person other) {
+        return this.name.compareTo(other.name);
     }
 }
